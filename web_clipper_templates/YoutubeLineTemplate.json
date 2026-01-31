@@ -1,0 +1,11 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YoutubeLine",
+	"behavior": "append-daily",
+	"noteContentFormat": "-  {{title}} [source:: [{{title}}]({{url}})] [source::{{author}}] [subject:: {{subject}}]  #youtube [type:: youtube]  [date_added:: [[{{date|date:\"YYYY-MM-DD\"}}]]] [date_posted:: [[{{published|date:\"YYYY-MM-DD\"}}]]]\n",
+	"properties": [],
+	"triggers": [
+		"https://www.youtube.com/watch",
+		"https://www.youtube.com/watch?v="
+	]
+}

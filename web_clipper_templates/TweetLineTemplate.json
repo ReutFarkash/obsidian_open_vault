@@ -1,0 +1,12 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "TweetLine",
+	"behavior": "append-daily",
+	"noteContentFormat": "-  {{meta:property:og:title|split:\":\"|slice:1:|join|markdown}} [source:: [{{title}}]({{url}})] [source::{{author}}] [subject:: {{subject}}]  #tweet [type:: tweet]  [date_added:: [[{{date|date:\"YYYY-MM-DD\"}}]]] [date_posted:: [[{{selector:article[tabindex=\"-1\"][data-testid=\"tweet\"] a[role=\"link\"] > time?datetime|date:\"YYYY-MM-DD\"}}]]]\n",
+	"properties": [],
+	"triggers": [
+		"/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/status\\/\\d+$/",
+		"https://x.com",
+		"http://x.com"
+	]
+}
