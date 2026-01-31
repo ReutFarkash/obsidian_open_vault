@@ -1,0 +1,17 @@
+/* wide-view.css */
+
+/* Target the class 'wide' added via YAML */
+.wide {
+    /* This variable controls the width in the default theme */
+    --file-line-width: 100% !important;
+    --max-width: 100% !important;
+    /* For some themes */
+}
+
+/* Fallback for themes that don't use the variables above */
+.wide .markdown-preview-view,
+.wide .markdown-source-view.mod-cm6 .cm-sizer {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

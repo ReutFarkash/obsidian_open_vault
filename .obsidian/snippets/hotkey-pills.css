@@ -1,0 +1,66 @@
+/* Generic hotkey pill, works in reading view */
+.hotkey-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.1rem;
+    border-radius: 999px;
+    font-size: 0.85em;
+    font-weight: bold;
+    /* Makes keys bold */
+    letter-spacing: 0.03em;
+    background-color: var(--tag-bg);
+    color: var(--tag-color);
+    border: 1px solid var(--tag-border-color, var(--background-modifier-border));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+    margin: 0 0.3rem 0 0.2rem;
+    /* Right: more space to text; left: after icon */
+    padding: 0.15rem 0.6rem;
+    /* Slightly taller/wider for breathing room */
+}
+
+/* Smooth icon-to-pill transition */
+.hotkey-pill {
+    margin-left: 0.1rem !important;
+    /* Override theme conflicts */
+}
+
+/* Reading View table cells: prevent wrap squeeze */
+.markdown-reading-view table td {
+    padding: 0.4rem 0.3rem;
+    /* Extra padding in cells */
+    vertical-align: middle;
+}
+
+/* Edit View (Live Preview) tables */
+.is-live-preview table td {
+    padding: 0.3rem;
+}
+
+/* Optional: slightly different look in edit mode (Live Preview) */
+.cm-s-obsidian span.hotkey-pill {
+    background-color: var(--tag-bg);
+    border-radius: 999px;
+    padding: 0.05rem 0.4rem;
+}
+
+/* Compact, bordered tables like Settings */
+.hotkey-table {
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9em;
+}
+
+.hotkey-table td {
+    border: 1px solid var(--background-modifier-border);
+    padding: 0.4rem 0.5rem;
+    text-align: center;
+}
+
+.hotkey-table th {
+    background-color: var(--background-secondary);
+    font-weight: 600;
+    border: 1px solid var(--background-modifier-border);
+}

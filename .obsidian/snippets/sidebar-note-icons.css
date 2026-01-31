@@ -1,0 +1,38 @@
+/* source:: https://www.perplexity.ai/search/in-obsidian-i-want-to-create-a-Plm21VhaRi.8XZMrmjgIpQ#12
+/* SIDEBAR TAB ICONS - Hide default + add custom */
+/* Copy block below for new tabs. Change aria-label & content */
+
+/* Templater Cheat Sheet: <% symbol */
+.workspace-tab-header[aria-label="Templater Cheat Sheet"] .workspace-tab-header-inner-icon {
+    .svg-icon {
+        display: none !important;
+    }
+
+    &::before {
+        content: "<%";
+        @extend .custom-tab-icon;
+        /* Reuse shared styles */
+    }
+}
+
+/* Cheat Sheet: Command key */
+.workspace-tab-header[aria-label="Hotkey Cheat Sheet"] .workspace-tab-header-inner-icon {
+    .svg-icon {
+        display: none !important;
+    }
+
+    &::before {
+        content: "⌘";
+        @extend .custom-tab-icon;
+    }
+}
+
+/* SHARED STYLES - Edit once for all tabs */
+.custom-tab-icon {
+    font-size: 16px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    line-height: 1;
+}
